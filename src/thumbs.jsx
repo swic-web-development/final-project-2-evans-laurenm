@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { fetchJokes } from './actions' // <-- Make sure this path is correct
 
 function Thumbs({ joke }) {
   const [vote, setVote] = useState(null)
@@ -42,6 +43,15 @@ function Thumbs({ joke }) {
           You voted {vote === 'up' ? '👍 Thumbs Up' : '👎 Thumbs Down'}
         </p>
       )}
+
+      <div className="mt-6 flex justify-center">
+        <button
+          onClick={fetchJokes}
+          className="rounded bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
+        >
+          Get Another Joke
+        </button>
+      </div>
     </div>
   )
 }
