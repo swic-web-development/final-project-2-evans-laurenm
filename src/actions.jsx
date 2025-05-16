@@ -12,7 +12,7 @@ export async function fetchJokes() {
     const jokeData = await jokeResponse.json()
 
     store.setState({
-      joke: jokeData.joke, // fixed typo, extracted just the joke string
+      joke: jokeData.joke,
       isLoading: false,
     })
   } catch (error) {
