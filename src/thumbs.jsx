@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { fetchJokes } from './actions' // <-- Make sure this path is correct
+import { fetchJokes } from './actions'
 
 function Thumbs({ joke }) {
   const [vote, setVote] = useState(null)
