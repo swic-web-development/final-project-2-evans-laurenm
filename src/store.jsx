@@ -25,7 +25,7 @@ function createStore(initialState = {}) {
 }
 
 const store = createStore({
-  films: [],
+  jokes: [],
   isLoading: false,
   error: null,
 })
